@@ -9,10 +9,6 @@ A small Laravel task manager styled as a violet-toned astronaut mission console.
 - **Course & Year:** BSIT-2
 - **Database Used:** SQLite
 
-## Purpose
-
-Orbital gives an individual one place to organize personal tasks, keep daily priorities visible, and track each task from pending to completed.
-
 ## Features
 
 - Add tasks
@@ -21,22 +17,34 @@ Orbital gives an individual one place to organize personal tasks, keep daily pri
 - Delete tasks
 - Update task status
 
-## Run locally
 
-Requirements: PHP 8.3+, Composer, Node.js, and npm.
+## Screenshot walkthrough
 
-```sh
-composer install
-cp .env.example .env
-php artisan key:generate
-touch database/database.sqlite
-php artisan migrate --seed
-npm install
-npm run build
-php artisan serve
-```
+The screenshots below show the typical workflow for creating and managing a mission in Orbital.
 
-Open the URL printed by `php artisan serve`. Demo missions are added by `--seed`; omit it for an empty task list.
+### 1. Open Mission Control
+
+![Orbital Mission Control dashboard](screenshots/1.png)
+
+Start on the Mission Control dashboard. Review the mission totals, flight-plan progress, and current mission queue, then select **New mission** to add a task.
+
+### 2. Enter the mission details
+
+![New mission form](screenshots/2.png)
+
+On the New Mission page, enter a **Mission name**. You can also add optional **Mission notes** and a **Target date** to provide more context for the task.
+
+### 3. Add the mission to the flight plan
+
+![Completed new mission form](screenshots/3.png)
+
+Review the information you entered, then select **Add to flight plan**. Orbital saves the mission and returns you to Mission Control, where the new task appears in the queue.
+
+### 4. Track and manage the mission
+
+![Mission queue with a saved task](screenshots/4.png)
+
+Use the mission queue to manage the saved task. Select the completion control to mark it as **Landed**, use **Edit** to change its details, or use **Delete** to remove it. The **All**, **In orbit**, and **Landed** filters help you focus on the missions you need to see.
 
 ## Tests
 
